@@ -13,11 +13,6 @@ Please read through the following guidelines.
 There are several ways to contribute, not just by writing code.
 See [Support][] if you have questions.
 
-### Financial support
-
-You can help financially.
-See [Sponsor][] for more info.
-
 ### Improve docs
 
 As a user you’re perfect to help improve the docs.
