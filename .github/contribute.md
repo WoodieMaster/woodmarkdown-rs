@@ -31,7 +31,7 @@ It’s probably a good idea to first post a question or open an issue to report 
 bug or suggest a new feature before creating a pull request.
 See [Project][] for more info.
 
-## Submitting an issue
+### Submitting an issue
 
 * the issue tracker is for issues, discussions are for questions
 * search the issue tracker (including closed issues) before opening a new
@@ -43,7 +43,7 @@ See [Project][] for more info.
 * the more time you put into an issue, the better help you can get
 * the best issue report is a failing test] proving it
 
-## Submitting a pull request
+### Submitting a pull request
 
 * run `cargo fmt` and `cargo test` locally to format and test your changes
 * non-trivial changes are often best discussed in an issue first, to prevent
@@ -55,19 +55,8 @@ See [Project][] for more info.
 * write a convincing description of why your pull request should land:
   it’s your job to be convincing
 
-## Project (for maintainers)
-
-See [Project][project] in the readme for info on how the project is structured
-and how to run useful scripts.
-
-### Release
-
-* update the `version` field in `Cargo.toml`
-* search for the previous version in `readme.md`, replace with new one
-* `git commit --all --message 1.2.3 && git tag 1.2.3 && git push && git push --tags`
-* `cargo publish`
-
-(similar for `mdast_util_to_markdown`)
+## Help with base project
+* contribute to the base project [markdown-rs](https://github.com/wooorm/markdown-rs/blob/main/.github/contribute.md)
 
 ## Resources
 

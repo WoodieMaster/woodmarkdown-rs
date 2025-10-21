@@ -1,22 +1,6 @@
-# markdown-rs
+# woodmarkdown-rs
 
-[![Build][badge-build-image]][badge-build-url]
-[![Coverage][badge-coverage-image]][badge-coverage-url]
-
-CommonMark compliant markdown parser in Rust with ASTs and extensions.
-
-## Feature highlights
-
-* [x] **[compliant][commonmark]**
-  (100% to CommonMark)
-* [x] **[extensions][]**
-  (100% GFM, 100% MDX, frontmatter, math)
-* [x] **[safe][security]**
-  (100% safe Rust, also 100% safe HTML by default)
-* [x] **[robust][test]**
-  (2300+ tests, 100% coverage, fuzz testing)
-* [x] **[ast][mdast]**
-  (mdast)
+Custom feature implementation on top of markdown-rs
 
 ## Links
 
@@ -55,6 +39,51 @@ An implementation of my own features for markdown, using the markdown-rs crate.
 * [Related](#related)
 * [License](#license)
 
+## Test
+
+`markdown-rs` is tested with the \~650 CommonMark tests and more than 1k extra
+tests confirmed with CM reference parsers.
+Then there’s even more tests for GFM and other extensions.
+These tests reach all branches in the code,
+which means that this project has 100% code coverage.
+Fuzz testing is used to check for things that might fall through coverage.
+
+`woodmarkdown-rs` has no additional tests yet.
+
+The following bash scripts are useful when working on this project:
+
+* generate code (latest CM tests and Unicode info):
+  ```sh
+  cargo run --manifest-path generate/Cargo.toml
+  ```
+* run examples:
+  ```sh
+  RUST_BACKTRACE=1 RUST_LOG=trace cargo run --example lib --features log
+  ```
+* format:
+  ```sh
+  cargo fmt && cargo fix --all-features --all-targets --workspace
+  ```
+* lint:
+  ```sh
+  cargo fmt --check && cargo clippy --all-features --all-targets --workspace
+  ```
+* test:
+  ```sh
+  RUST_BACKTRACE=1 cargo test --all-features --workspace
+  ```
+* docs:
+  ```sh
+  cargo doc --document-private-items --examples --workspace
+  ```
+* fuzz:
+  ```sh
+  cargo install cargo-fuzz
+  cargo install honggfuzz
+  cargo +nightly fuzz run markdown_libfuzz
+  cargo hfuzz run markdown_honggfuzz
+  ```
+
 ## Base Project
 
 The base project markdown-rs can be found here:
@@ -76,4 +105,4 @@ project.
 
 Original:
 
-[MIT][license] © [Titus Wormer][author]
+[MIT][license] © [Titus Wormer](https://github.com/wooorm)
