@@ -1,10 +1,10 @@
-use markdown::{
+use pretty_assertions::assert_eq;
+use woodmarkdown::{
     mdast::{InlineCode, Node, Paragraph, Root, Text},
     message, to_html, to_html_with_options, to_mdast,
     unist::Position,
     CompileOptions, Constructs, Options, ParseOptions,
 };
-use pretty_assertions::assert_eq;
 
 #[test]
 fn code_text() -> Result<(), message::Message> {

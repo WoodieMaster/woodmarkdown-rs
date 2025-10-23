@@ -125,7 +125,7 @@
 //! ###### Element or fragment attribute values
 //!
 //! JSX elements or JSX fragments as attribute values are not supported.
-//! The reason for this change is that it would be confusing whether markdown
+//! The reason for this change is that it would be confusing whether woodmarkdown
 //! would work.
 //!
 //! Incorrect:

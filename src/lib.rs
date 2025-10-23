@@ -73,16 +73,16 @@ pub use configuration::{CompileOptions, Constructs, Options, ParseOptions};
 
 use alloc::string::String;
 
-/// Turn markdown into HTML.
+/// Turn woodmarkdown into HTML.
 ///
-/// Compiles markdown to HTML according to `CommonMark`.
-/// Use [`to_html_with_options()`][] to configure how markdown is turned into
+/// Compiles woodmarkdown to HTML according to `CommonMark`.
+/// Use [`to_html_with_options()`][] to configure how woodmarkdown is turned into
 /// HTML.
 ///
 /// ## Examples
 ///
 /// ```
-/// use markdown::to_html;
+/// use woodmarkdown::to_html;
 ///
 /// assert_eq!(to_html("# Hi Mercury!"), "<h1>Hi Mercury!</h1>");
 /// ```
@@ -90,11 +90,11 @@ pub fn to_html(value: &str) -> String {
     to_html_with_options(value, &Options::default()).unwrap()
 }
 
-/// Turn markdown into HTML, with configuration.
+/// Turn woodmarkdown into HTML, with configuration.
 ///
 /// ## Errors
 ///
-/// `to_html_with_options()` never errors with normal markdown because markdown
+/// `to_html_with_options()` never errors with normal woodmarkdown because woodmarkdown
 /// does not have syntax errors, so feel free to `unwrap()`.
 /// However, MDX does have syntax errors.
 /// When MDX is turned on, there are several errors that can occur with how
@@ -103,8 +103,8 @@ pub fn to_html(value: &str) -> String {
 /// ## Examples
 ///
 /// ```
-/// use markdown::{to_html_with_options, CompileOptions, Options};
-/// # fn main() -> Result<(), markdown::message::Message> {
+/// use woodmarkdown::{to_html_with_options, CompileOptions, Options};
+/// # fn main() -> Result<(), woodmarkdown::message::Message> {
 ///
 /// // Use GFM:
 /// let result = to_html_with_options("~Venus~Mars!", &Options::gfm())?;
@@ -134,11 +134,11 @@ pub fn to_html_with_options(value: &str, options: &Options) -> Result<String, me
     ))
 }
 
-/// Turn markdown into a syntax tree.
+/// Turn woodmarkdown into a syntax tree.
 ///
 /// ## Errors
 ///
-/// `to_mdast()` never errors with normal markdown because markdown does not
+/// `to_mdast()` never errors with normal woodmarkdown because woodmarkdown does not
 /// have syntax errors, so feel free to `unwrap()`.
 /// However, MDX does have syntax errors.
 /// When MDX is turned on, there are several errors that can occur with how
@@ -147,8 +147,8 @@ pub fn to_html_with_options(value: &str, options: &Options) -> Result<String, me
 /// ## Examples
 ///
 /// ```
-/// use markdown::{to_mdast, ParseOptions};
-/// # fn main() -> Result<(), markdown::message::Message> {
+/// use woodmarkdown::{to_mdast, ParseOptions};
+/// # fn main() -> Result<(), woodmarkdown::message::Message> {
 ///
 /// let tree = to_mdast("# Hi *Earth*!", &ParseOptions::default())?;
 ///

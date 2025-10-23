@@ -10,7 +10,7 @@ use crate::{
     },
 };
 use alloc::string::String;
-use markdown::{
+use woodmarkdown::{
     mdast::{Image, Node},
     message::Message,
 };

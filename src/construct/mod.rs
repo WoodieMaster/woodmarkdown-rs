@@ -6,7 +6,7 @@
 //!
 //! ## Content type
 //!
-//! The following content types are found in markdown:
+//! The following content types are found in woodmarkdown:
 //!
 //! * [document][]
 //! * [flow][]
@@ -60,7 +60,7 @@
 //! > 👉 **Note**: for performance reasons, hard break (trailing) is formed by
 //! > [whitespace][partial_whitespace].
 //!
-//! The following constructs are extensions found in markdown:
+//! The following constructs are extensions found in woodmarkdown:
 //!
 //! * [frontmatter][]
 //! * [gfm autolink literal][gfm_autolink_literal]
@@ -132,7 +132,7 @@
 //! ; 0x00..=0x1F, 0x7F
 //! ascii_control ::= 0x00 | 0x01 | 0x02 | 0x03 | 0x04 | 0x05 | 0x06 | 0x07 | 0x08 | 0x09 | 0x0A | 0x0B | 0x0C | 0x0D | 0x0E | 0x0F | 0x10 | 0x11 | 0x12 | 0x13 | 0x14 | 0x15 | 0x16 | 0x17 | 0x18 | 0x19 | 0x1A | 0x1B | 0x1C | 0x1D | 0x1E | 0x1F | 0x7F
 //!
-//! ; Markdown groups:
+//! ; markdown groups:
 //! ; Any byte (u8)
 //! byte ::= 0x00..=0xFFFF
 //! space_or_tab ::= '\t' | ' '

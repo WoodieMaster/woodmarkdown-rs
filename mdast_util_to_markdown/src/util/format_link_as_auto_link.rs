@@ -2,7 +2,7 @@
 
 use crate::state::State;
 use alloc::{format, string::ToString};
-use markdown::mdast::{Link, Node};
+use woodmarkdown::mdast::{Link, Node};
 use regex::RegexBuilder;
 
 pub fn format_link_as_auto_link(link: &Link, node: &Node, state: &State) -> bool {

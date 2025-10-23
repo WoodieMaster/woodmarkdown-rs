@@ -11,7 +11,7 @@ use alloc::{
     format,
     string::{String, ToString},
 };
-use markdown::{
+use woodmarkdown::{
     mdast::{ListItem, Node},
     message::Message,
 };

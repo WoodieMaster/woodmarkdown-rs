@@ -1,5 +1,5 @@
-use markdown::{mdast::Node, message::Message, Constructs, ParseOptions};
 use test_utils::swc::{parse_esm, parse_expression};
+use woodmarkdown::{mdast::Node, message::Message, Constructs, ParseOptions};
 mod test_utils;
 
 #[allow(unused)]
@@ -28,7 +28,7 @@ fn serde_compile_options() -> Result<(), Error> {
     use pretty_assertions::assert_eq;
 
     assert_eq!(
-        serde_json::to_string(&markdown::CompileOptions::gfm()).unwrap(),
+        serde_json::to_string(&woodmarkdown::CompileOptions::gfm()).unwrap(),
         r#"{"allowAnyImgSrc":false,"allowDangerousHtml":false,"allowDangerousProtocol":false,"defaultLineEnding":"\n","gfmFootnoteBackLabel":null,"gfmFootnoteClobberPrefix":null,"gfmFootnoteLabelAttributes":null,"gfmFootnoteLabelTagName":null,"gfmFootnoteLabel":null,"gfmTaskListItemCheckable":false,"gfmTagfilter":true}"#
     );
 
@@ -729,7 +729,7 @@ fn serde_paragraph() -> Result<(), Error> {
 fn assert_serde(input: &str, expected: &str, options: ParseOptions) -> Result<(), Error> {
     use pretty_assertions::assert_eq;
 
-    let mut source = markdown::to_mdast(input, &options).map_err(Error::Mdast)?;
+    let mut source = woodmarkdown::to_mdast(input, &options).map_err(Error::Mdast)?;
 
     remove_position(&mut source);
     // Serialize to JSON

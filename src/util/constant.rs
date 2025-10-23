@@ -62,14 +62,14 @@ pub const CHARACTER_REFERENCE_NAMED_SIZE_MAX: usize = 31;
 
 /// The number of markers needed for [code (fenced)][raw_flow] to form.
 ///
-/// Like many things in markdown, the number is `3`.
+/// Like many things in woodmarkdown, the number is `3`.
 ///
 /// [raw_flow]: crate::construct::raw_flow
 pub const CODE_FENCED_SEQUENCE_SIZE_MIN: usize = 3;
 
 /// The number of markers needed for [frontmatter][] to form.
 ///
-/// Like many things in markdown, the number is `3`.
+/// Like many things in woodmarkdown, the number is `3`.
 ///
 /// [frontmatter]: crate::construct::frontmatter
 pub const FRONTMATTER_SEQUENCE_SIZE: usize = 3;
@@ -116,7 +116,7 @@ pub const HEADING_ATX_OPENING_FENCE_SIZE_MAX: usize = 6;
 /// List of HTML tag names that form the **basic** production of
 /// [HTML (flow)][html_flow].
 ///
-/// The **basic** production allows interleaving HTML and markdown with blank
+/// The **basic** production allows interleaving HTML and woodmarkdown with blank
 /// lines and allows flow (block) elements to interrupt definitions, paragraphs,
 /// and heading (setext).
 /// Tag name matching must be performed insensitive to case, and thus this list
@@ -211,7 +211,7 @@ pub const HTML_CDATA_PREFIX: [u8; 6] = [b'C', b'D', b'A', b'T', b'A', b'['];
 /// [HTML (flow)][html_flow].
 ///
 /// The **raw** production allows blank lines and thus no interleaving with
-/// markdown.
+/// woodmarkdown.
 /// Tag name matching must be performed insensitive to case, and thus this list
 /// includes lowercase tag names.
 ///
@@ -279,7 +279,7 @@ pub const SAFE_PROTOCOL_SRC: [&str; 2] = ["http", "https"];
 /// The number of characters that form a tab stop.
 ///
 /// This relates to the number of whitespace characters needed to form certain
-/// constructs in markdown, most notable the whitespace required to form
+/// constructs in woodmarkdown, most notable the whitespace required to form
 /// [code (indented)][code_indented].
 ///
 /// [code_indented]: crate::construct::code_indented
@@ -287,7 +287,7 @@ pub const TAB_SIZE: usize = 4;
 
 /// The number of markers needed for a [thematic break][thematic_break] to form.
 ///
-/// Like many things in markdown, the number is `3`.
+/// Like many things in woodmarkdown, the number is `3`.
 ///
 /// [thematic_break]: crate::construct::thematic_break
 pub const THEMATIC_BREAK_MARKER_COUNT_MIN: usize = 3;
@@ -2438,7 +2438,7 @@ pub static CHARACTER_REFERENCES: [(&str, &str); 2125] = [
 
 /// List of names and values that form named character reference in HTML 4.
 ///
-/// This list is normally not used in markdown, but it is used in MDX, because
+/// This list is normally not used in woodmarkdown, but it is used in MDX, because
 /// in JSX attribute values, only the old HTML 4 character references are
 /// supported.
 ///

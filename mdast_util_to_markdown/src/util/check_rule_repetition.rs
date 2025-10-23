@@ -2,7 +2,7 @@
 
 use crate::state::State;
 use alloc::{boxed::Box, format};
-use markdown::message::Message;
+use woodmarkdown::message::Message;
 
 pub fn check_rule_repetition(state: &State) -> Result<u32, Message> {
     let repetition = state.options.rule_repetition;

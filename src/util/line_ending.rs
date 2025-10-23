@@ -1,6 +1,6 @@
 use alloc::{str::FromStr, string::String};
 
-/// Type of line endings in markdown.
+/// Type of line endings in woodmarkdown.
 ///
 /// Particularly when working with Windows, you might want to use
 /// `LineEnding::CarriageReturnLineFeed`.
@@ -8,7 +8,7 @@ use alloc::{str::FromStr, string::String};
 /// ## Examples
 ///
 /// ```
-/// use markdown::LineEnding;
+/// use woodmarkdown::LineEnding;
 /// # fn main() {
 ///
 /// // Use a CR + LF combination:

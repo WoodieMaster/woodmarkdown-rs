@@ -1,4 +1,4 @@
-use markdown::{
+use woodmarkdown::{
     mdast::{Emphasis, Node, Paragraph, Root, Strong, Text},
     message, to_html, to_html_with_options, to_mdast,
     unist::Position,

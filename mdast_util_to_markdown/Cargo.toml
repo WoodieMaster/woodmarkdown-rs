@@ -1,5 +1,5 @@
 [dependencies]
-markdown = { path = "../", version = "1.0.0" }
+woodmarkdown = { path = "../", version = "1.0.0" }
 regex = { version = "1" }
 
 [dev-dependencies]

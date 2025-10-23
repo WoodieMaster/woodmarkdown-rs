@@ -5,7 +5,7 @@ use crate::{
     construct_name::ConstructName,
     state::{Info, State},
 };
-use markdown::{
+use woodmarkdown::{
     mdast::{Node, Paragraph},
     message::Message,
 };

@@ -1,4 +1,4 @@
-use markdown::{
+use woodmarkdown::{
     mdast::{Break, Heading, Node, Text},
     to_mdast as from,
 };

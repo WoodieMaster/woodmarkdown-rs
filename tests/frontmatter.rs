@@ -1,4 +1,4 @@
-use markdown::{
+use woodmarkdown::{
     mdast::{Node, Root, Toml, Yaml},
     message, to_html, to_html_with_options, to_mdast,
     unist::Position,

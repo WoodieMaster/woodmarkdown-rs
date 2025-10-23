@@ -71,7 +71,7 @@ struct Definition {
     title: Option<String>,
 }
 
-/// Context used to compile markdown.
+/// Context used to compile woodmarkdown.
 #[allow(clippy::struct_excessive_bools)]
 #[derive(Debug)]
 struct CompileContext<'a> {
@@ -83,7 +83,7 @@ struct CompileContext<'a> {
     /// Configuration.
     options: &'a CompileOptions,
     // Fields used by handlers to track the things they need to track to
-    // compile markdown.
+    // compile woodmarkdown.
     /// Rank of heading (atx).
     heading_atx_rank: Option<usize>,
     /// Buffer of heading (setext) text.

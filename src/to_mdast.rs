@@ -81,7 +81,7 @@ impl Reference {
     }
 }
 
-/// Context used to compile markdown.
+/// Context used to compile woodmarkdown.
 #[allow(clippy::struct_excessive_bools)]
 #[derive(Debug)]
 struct CompileContext<'a> {
@@ -91,7 +91,7 @@ struct CompileContext<'a> {
     /// List of bytes.
     bytes: &'a [u8],
     // Fields used by handlers to track the things they need to track to
-    // compile markdown.
+    // compile woodmarkdown.
     character_reference_marker: u8,
     gfm_table_inside: bool,
     hard_break_after: bool,

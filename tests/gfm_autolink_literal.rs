@@ -3,7 +3,7 @@
 // To do: clippy introduced this in 1.72 but breaks when it fixes it.
 // Remove when solved.
 
-use markdown::{
+use woodmarkdown::{
     mdast::{Link, Node, Paragraph, Root, Text},
     message, to_html, to_html_with_options, to_mdast,
     unist::Position,

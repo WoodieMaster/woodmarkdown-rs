@@ -26,7 +26,7 @@
 //! [character references][character_reference] are allowed.
 //!
 //! > 👉 **Note**: this label relates to, but is not, the initial “label” of
-//! > what is know as a reference in markdown:
+//! > what is know as a reference in woodmarkdown:
 //! >
 //! > | Kind      | Link     | Image     |
 //! > | --------- | -------- | --------- |

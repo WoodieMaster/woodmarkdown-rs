@@ -30,7 +30,7 @@ pub enum Signal {
     /// Done, successfully.
     ///
     /// `markdown-rs` knows that this is the end of a valid expression/esm and
-    /// continues with markdown.
+    /// continues with woodmarkdown.
     ///
     /// ## Examples
     ///

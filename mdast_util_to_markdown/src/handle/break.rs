@@ -6,7 +6,7 @@ use crate::{
     util::pattern_in_scope::pattern_in_scope,
 };
 use alloc::string::ToString;
-use markdown::{
+use woodmarkdown::{
     mdast::{Break, Node},
     message::Message,
 };

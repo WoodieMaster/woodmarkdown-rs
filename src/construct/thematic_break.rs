@@ -37,7 +37,7 @@
 //! is recommended to use asterisks for thematic breaks to distinguish from
 //! such use.
 //! Because asterisks can be used to form the most markdown constructs, using
-//! them has the added benefit of making it easier to gloss over markdown: you
+//! them has the added benefit of making it easier to gloss over woodmarkdown: you
 //! can look for asterisks to find syntax while not worrying about other
 //! characters.
 //!

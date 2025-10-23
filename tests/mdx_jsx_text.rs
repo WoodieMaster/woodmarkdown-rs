@@ -1,5 +1,5 @@
 mod test_utils;
-use markdown::{
+use woodmarkdown::{
     mdast::{
         AttributeContent, AttributeValue, AttributeValueExpression, Emphasis, MdxFlowExpression,
         MdxJsxAttribute, MdxJsxExpressionAttribute, MdxJsxFlowElement, MdxJsxTextElement, Node,
@@ -46,7 +46,7 @@ fn mdx_jsx_text_core() -> Result<(), message::Message> {
     assert_eq!(
         to_html_with_options("a <b>*b*</b> c.", &mdx)?,
         "<p>a <em>b</em> c.</p>",
-        "should support markdown inside elements"
+        "should support woodmarkdown inside elements"
     );
 
     assert_eq!(
@@ -1320,7 +1320,7 @@ fn mdx_jsx_text_complete() -> Result<(), message::Message> {
     assert_eq!(
         to_html_with_options("1 < 3", &mdx)?,
         "<p>1 &lt; 3</p>",
-        "should allow `<` followed by markdown whitespace as text in markdown"
+        "should allow `<` followed by woodmarkdown whitespace as text in woodmarkdown"
     );
 
     Ok(())

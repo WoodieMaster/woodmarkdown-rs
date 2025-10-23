@@ -6,8 +6,8 @@
 
 use alloc::string::String;
 pub use configure::{IndentOptions, Options};
-use markdown::{mdast::Node, message::Message};
 use state::{Info, State};
+use woodmarkdown::{mdast::Node, message::Message};
 
 extern crate alloc;
 mod association;

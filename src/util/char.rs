@@ -38,7 +38,7 @@ pub enum Kind {
 
 /// Get a [`char`][] right before `index` in bytes (`&[u8]`).
 ///
-/// In most cases, markdown operates on ASCII bytes.
+/// In most cases, woodmarkdown operates on ASCII bytes.
 /// In a few cases, it is unicode aware, so we need to find an actual char.
 pub fn before_index(bytes: &[u8], index: usize) -> Option<char> {
     let start = if index < 4 { 0 } else { index - 4 };
@@ -47,7 +47,7 @@ pub fn before_index(bytes: &[u8], index: usize) -> Option<char> {
 
 /// Get a [`char`][] right at `index` in bytes (`&[u8]`).
 ///
-/// In most cases, markdown operates on ASCII bytes.
+/// In most cases, woodmarkdown operates on ASCII bytes.
 /// In a few cases, it is unicode aware, so we need to find an actual char.
 pub fn after_index(bytes: &[u8], index: usize) -> Option<char> {
     let end = if index + 4 > bytes.len() {

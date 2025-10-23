@@ -8,7 +8,7 @@ use crate::{
 };
 use alloc::string::String;
 use core::mem;
-use markdown::{
+use woodmarkdown::{
     mdast::{LinkReference, Node, ReferenceKind},
     message::Message,
 };

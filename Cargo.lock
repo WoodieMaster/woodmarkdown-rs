@@ -1054,20 +1054,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34080505efa8e45a4b816c349525ebe327ceaa8559756f0356cba97ef3bf7432"
 
 [[package]]
-name = "markdown"
-version = "1.0.0"
-dependencies = [
- "criterion",
- "env_logger",
- "log",
- "pretty_assertions",
- "serde",
- "serde_json",
- "swc_core",
- "unicode-id",
-]
-
-[[package]]
 name = "markdown-generate"
 version = "0.0.0"
 dependencies = [
@@ -1080,9 +1066,9 @@ dependencies = [
 name = "mdast_util_to_markdown"
 version = "0.0.2"
 dependencies = [
- "markdown",
  "pretty_assertions",
  "regex",
+ "woodmarkdown",
 ]
 
 [[package]]
@@ -2750,6 +2736,20 @@ name = "wit-bindgen"
 version = "0.46.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f17a85883d4e6d00e8a97c586de764dabcc06133f7f1d55dce5cdc070ad7fe59"
+
+[[package]]
+name = "woodmarkdown"
+version = "1.0.0"
+dependencies = [
+ "criterion",
+ "env_logger",
+ "log",
+ "pretty_assertions",
+ "serde",
+ "serde_json",
+ "swc_core",
+ "unicode-id",
+]
 
 [[package]]
 name = "writeable"

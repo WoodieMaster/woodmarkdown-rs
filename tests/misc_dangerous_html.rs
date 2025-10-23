@@ -1,4 +1,4 @@
-use markdown::{message, to_html, to_html_with_options, CompileOptions, Options};
+use woodmarkdown::{message, to_html, to_html_with_options, CompileOptions, Options};
 use pretty_assertions::assert_eq;
 
 #[test]

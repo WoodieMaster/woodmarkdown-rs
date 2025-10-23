@@ -3,7 +3,7 @@
 use super::Handle;
 use crate::state::{Info, State};
 use alloc::format;
-use markdown::{
+use woodmarkdown::{
     mdast::{InlineMath, Node},
     message::Message,
 };

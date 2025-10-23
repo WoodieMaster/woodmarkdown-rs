@@ -200,7 +200,7 @@ pub fn eol_after(tokenizer: &mut Tokenizer) -> State {
 
 pub fn prefix(tokenizer: &mut Tokenizer) -> State {
     // Tab-size to eat has to be the same as what we serialize as.
-    // While in some places in markdown that’s 4, in JS it’s more common as 2.
+    // While in some places in woodmarkdown that’s 4, in JS it’s more common as 2.
     // Which is what’s also in `mdast-util-mdx-jsx`:
     // <https://github.com/syntax-tree/mdast-util-mdx-jsx/blob/40b951b/lib/index.js#L52>
     // <https://github.com/micromark/micromark-extension-mdx-expression/blob/7c305ff/packages/micromark-factory-mdx-expression/dev/index.js#L37>

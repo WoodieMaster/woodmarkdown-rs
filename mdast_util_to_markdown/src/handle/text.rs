@@ -5,7 +5,7 @@ use crate::{
     state::{Info, State},
     util::safe::SafeConfig,
 };
-use markdown::{
+use woodmarkdown::{
     mdast::{Node, Text},
     message::Message,
 };

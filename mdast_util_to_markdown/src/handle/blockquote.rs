@@ -6,7 +6,7 @@ use crate::{
     state::{Info, State},
 };
 use alloc::string::String;
-use markdown::{
+use woodmarkdown::{
     mdast::{Blockquote, Node},
     message::Message,
 };

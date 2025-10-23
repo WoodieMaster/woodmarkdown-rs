@@ -1,10 +1,10 @@
-use markdown::{
+use pretty_assertions::assert_eq;
+use woodmarkdown::{
     mdast::{Html, Node, Root},
     message, to_html, to_html_with_options, to_mdast,
     unist::Position,
     CompileOptions, Constructs, Options, ParseOptions,
 };
-use pretty_assertions::assert_eq;
 
 #[test]
 fn html_flow() -> Result<(), message::Message> {
@@ -598,7 +598,7 @@ okay.",
     assert_eq!(
         to_html_with_options("<DIV CLASS=\"foo\">\n\n*Markdown*\n\n</DIV>", &danger)?,
         "<DIV CLASS=\"foo\">\n<p><em>Markdown</em></p>\n</DIV>",
-        "should support html w/ markdown in between"
+        "should support html w/ woodmarkdown in between"
     );
 
     assert_eq!(

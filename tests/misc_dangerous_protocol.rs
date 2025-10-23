@@ -1,4 +1,4 @@
-use markdown::to_html;
+use woodmarkdown::to_html;
 use pretty_assertions::assert_eq;
 
 #[test]
@@ -198,7 +198,7 @@ fn dangerous_protocol_link() {
 
 #[test]
 fn dangerous_protocol_image_with_option() {
-    use markdown::{to_html_with_options, CompileOptions, Options};
+    use woodmarkdown::{to_html_with_options, CompileOptions, Options};
 
     let options = Options {
         compile: CompileOptions {

@@ -5,7 +5,7 @@ use alloc::string::String;
 /// Normalize an identifier, as found in [references][label_end] and
 /// [definitions][definition], so it can be compared when matching.
 ///
-/// This collapsed whitespace found in markdown (`\t`, `\r`, `\n`, and ` `)
+/// This collapsed whitespace found in woodmarkdown (`\t`, `\r`, `\n`, and ` `)
 /// into one space, trims it (as in, dropping the first and last space), and
 /// then performs unicode case folding twice: first by lowercasing uppercase
 /// characters, and then uppercasing lowercase characters.
@@ -16,7 +16,7 @@ use alloc::string::String;
 /// Hence, to get that form, we perform both lower- and uppercase.
 ///
 /// Performing these steps in that order works, but the inverse does not work.
-/// To illustrate, say the source markdown containes two identifiers
+/// To illustrate, say the source woodmarkdown containes two identifiers
 /// `SS` (U+0053 U+0053) and `ẞ` (U+1E9E), which would be lowercased to
 /// `ss` (U+0073 U+0073) and `ß` (U+00DF), and those in turn would both
 /// uppercase to `SS` (U+0053 U+0053).
@@ -26,7 +26,7 @@ use alloc::string::String;
 /// ## Examples
 ///
 /// ```rust ignore
-/// markdown::util::normalize_identifier::normalize_identifier;
+/// woodmarkdown::util::normalize_identifier::normalize_identifier;
 ///
 /// assert_eq!(normalize_identifier(" a "), "a");
 /// assert_eq!(normalize_identifier("a\t\r\nb"), "a b");

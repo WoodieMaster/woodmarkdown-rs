@@ -1,5 +1,5 @@
 mod test_utils;
-use markdown::{
+use woodmarkdown::{
     mdast::{MdxjsEsm, Node, Root},
     message, to_html_with_options, to_mdast,
     unist::Position,
@@ -128,7 +128,7 @@ fn mdx_esm() -> Result<(), message::Message> {
             .unwrap()
             .to_string(),
         "2:6: Could not parse esm with swc: Expression expected (mdx:swc)",
-        "should crash on markdown after import/export w/o blank line"
+        "should crash on woodmarkdown after import/export w/o blank line"
     );
 
     assert_eq!(

@@ -9,7 +9,7 @@ use crate::util::location::Location;
 use crate::ParseOptions;
 use alloc::{string::String, vec, vec::Vec};
 
-/// Info needed, in all content types, when parsing markdown.
+/// Info needed, in all content types, when parsing woodmarkdown.
 ///
 /// Importantly, this contains a set of known definitions.
 /// It also references the input value as bytes (`u8`).
@@ -27,7 +27,7 @@ pub struct ParseState<'a> {
     pub gfm_footnote_definitions: Vec<String>,
 }
 
-/// Turn a string of markdown into events.
+/// Turn a string of woodmarkdown into events.
 ///
 /// Passes the bytes back so the compiler can access the source.
 pub fn parse<'a>(

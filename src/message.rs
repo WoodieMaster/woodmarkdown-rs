@@ -5,7 +5,7 @@ use alloc::{boxed::Box, fmt, string::String};
 pub struct Message {
     /// Place of message.
     pub place: Option<Box<Place>>,
-    /// Reason for message (should use markdown).
+    /// Reason for message (should use woodmarkdown).
     pub reason: String,
     /// Category of message.
     pub rule_id: Box<String>,

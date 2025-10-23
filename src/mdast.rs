@@ -817,7 +817,7 @@ pub struct Definition {
     /// `label` is a string value: it works just like `title` on a link or a
     /// `lang` on code: character escapes and character references are parsed.
     ///
-    /// To normalize a value, collapse markdown whitespace (`[\t\n\r ]+`) to a
+    /// To normalize a value, collapse woodmarkdown whitespace (`[\t\n\r ]+`) to a
     /// space, trim the optional initial and/or final space, and perform
     /// case-folding.
     #[cfg_attr(feature = "serde", serde(skip_serializing_if = "Option::is_none"))]
@@ -1003,7 +1003,7 @@ pub struct LinkReference {
     /// `label` is a string value: it works just like `title` on a link or a
     /// `lang` on code: character escapes and character references are parsed.
     ///
-    /// To normalize a value, collapse markdown whitespace (`[\t\n\r ]+`) to a
+    /// To normalize a value, collapse woodmarkdown whitespace (`[\t\n\r ]+`) to a
     /// space, trim the optional initial and/or final space, and perform
     /// case-folding.
     #[cfg_attr(feature = "serde", serde(skip_serializing_if = "Option::is_none"))]
@@ -1040,7 +1040,7 @@ pub struct ImageReference {
     /// `label` is a string value: it works just like `title` on a link or a
     /// `lang` on code: character escapes and character references are parsed.
     ///
-    /// To normalize a value, collapse markdown whitespace (`[\t\n\r ]+`) to a
+    /// To normalize a value, collapse woodmarkdown whitespace (`[\t\n\r ]+`) to a
     /// space, trim the optional initial and/or final space, and perform
     /// case-folding.
     #[cfg_attr(feature = "serde", serde(skip_serializing_if = "Option::is_none"))]
@@ -1071,7 +1071,7 @@ pub struct FootnoteDefinition {
     /// `label` is a string value: it works just like `title` on a link or a
     /// `lang` on code: character escapes and character references are parsed.
     ///
-    /// To normalize a value, collapse markdown whitespace (`[\t\n\r ]+`) to a
+    /// To normalize a value, collapse woodmarkdown whitespace (`[\t\n\r ]+`) to a
     /// space, trim the optional initial and/or final space, and perform
     /// case-folding.
     #[cfg_attr(feature = "serde", serde(skip_serializing_if = "Option::is_none"))]
@@ -1100,7 +1100,7 @@ pub struct FootnoteReference {
     /// `label` is a string value: it works just like `title` on a link or a
     /// `lang` on code: character escapes and character references are parsed.
     ///
-    /// To normalize a value, collapse markdown whitespace (`[\t\n\r ]+`) to a
+    /// To normalize a value, collapse woodmarkdown whitespace (`[\t\n\r ]+`) to a
     /// space, trim the optional initial and/or final space, and perform
     /// case-folding.
     #[cfg_attr(feature = "serde", serde(skip_serializing_if = "Option::is_none"))]

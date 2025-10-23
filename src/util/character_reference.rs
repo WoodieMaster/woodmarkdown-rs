@@ -25,7 +25,7 @@ use core::str;
 /// ## Examples
 ///
 /// ```rust ignore
-/// use markdown::util::decode_character_reference::decode_named;
+/// use woodmarkdown::util::decode_character_reference::decode_named;
 ///
 /// assert_eq!(decode_named("amp", true), "&");
 /// assert_eq!(decode_named("AElig", true), "Æ");
@@ -60,7 +60,7 @@ pub fn decode_named(value: &str, html5: bool) -> Option<String> {
 /// ## Examples
 ///
 /// ```rust ignore
-/// use markdown::util::decode_character_reference::decode_numeric;
+/// use woodmarkdown::util::decode_character_reference::decode_numeric;
 ///
 /// assert_eq!(decode_numeric("123", 10), "{");
 /// assert_eq!(decode_numeric("9", 16), "\t");
@@ -158,7 +158,7 @@ pub fn value_test(marker: u8) -> fn(&u8) -> bool {
 /// > 👉 **Note**: this currently only supports the 252 named character
 /// > references from HTML 4, as it’s only used for JSX.
 /// >
-/// > If it’s ever needed to support HTML 5 (which is what normal markdown
+/// > If it’s ever needed to support HTML 5 (which is what normal woodmarkdown
 /// > uses), a boolean parameter can be added here.
 pub fn parse(value: &str) -> String {
     let bytes = value.as_bytes();

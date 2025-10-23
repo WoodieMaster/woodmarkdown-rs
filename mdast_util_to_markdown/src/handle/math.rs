@@ -7,7 +7,7 @@ use crate::{
     util::{longest_char_streak::longest_char_streak, safe::SafeConfig},
 };
 use alloc::string::String;
-use markdown::{
+use woodmarkdown::{
     mdast::{Math, Node},
     message::Message,
 };

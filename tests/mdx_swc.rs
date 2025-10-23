@@ -1,7 +1,7 @@
 mod test_utils;
-use markdown::{message, to_html_with_options, Constructs, Options, ParseOptions};
 use pretty_assertions::assert_eq;
 use test_utils::swc::{parse_esm, parse_expression};
+use woodmarkdown::{message, to_html_with_options, Constructs, Options, ParseOptions};
 
 #[test]
 fn mdx_swc() -> Result<(), message::Message> {

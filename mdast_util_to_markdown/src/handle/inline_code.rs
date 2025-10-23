@@ -3,11 +3,11 @@
 use super::Handle;
 use crate::state::{Info, State};
 use alloc::{format, string::String};
-use markdown::{
+use regex::Regex;
+use woodmarkdown::{
     mdast::{InlineCode, Node},
     message::Message,
 };
-use regex::Regex;
 
 impl Handle for InlineCode {
     fn handle(

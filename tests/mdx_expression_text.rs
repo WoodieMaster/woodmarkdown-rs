@@ -1,5 +1,5 @@
 mod test_utils;
-use markdown::{
+use woodmarkdown::{
     mdast::{Blockquote, MdxTextExpression, Node, Paragraph, Root, Text},
     message, to_html_with_options, to_mdast,
     unist::Position,

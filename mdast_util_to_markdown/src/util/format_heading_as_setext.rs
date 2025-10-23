@@ -1,7 +1,7 @@
 //! JS equivalent https://github.com/syntax-tree/mdast-util-to-markdown/blob/main/lib/util/format-heading-as-setext.js
 
 use alloc::string::{String, ToString};
-use markdown::mdast::{Heading, Node};
+use woodmarkdown::mdast::{Heading, Node};
 use regex::Regex;
 
 use crate::state::State;

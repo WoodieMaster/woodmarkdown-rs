@@ -1,4 +1,4 @@
-use markdown::mdast::{InlineCode, Node};
+use woodmarkdown::mdast::{InlineCode, Node};
 use mdast_util_to_markdown::to_markdown as to;
 use pretty_assertions::assert_eq;
 

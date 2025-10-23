@@ -1,5 +1,5 @@
-use markdown::{mdast, message, to_html, to_html_with_options, to_mdast, Options};
 use pretty_assertions::assert_eq;
+use woodmarkdown::{mdast, message, to_html, to_html_with_options, to_mdast, Options};
 
 #[test]
 fn fuzz() -> Result<(), message::Message> {
@@ -118,10 +118,10 @@ fn fuzz() -> Result<(), message::Message> {
     );
 
     assert_eq!(
-        markdown::to_html_with_options(
+        woodmarkdown::to_html_with_options(
             "<",
-            &markdown::Options {
-                parse: markdown::ParseOptions::mdx(),
+            &woodmarkdown::Options {
+                parse: woodmarkdown::ParseOptions::mdx(),
                 ..Default::default()
             }
         ),

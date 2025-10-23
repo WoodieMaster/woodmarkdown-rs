@@ -1,4 +1,4 @@
-use markdown::mdast::{Node, Text};
+use woodmarkdown::mdast::{Node, Text};
 use mdast_util_to_markdown::to_markdown as to;
 use pretty_assertions::assert_eq;
 

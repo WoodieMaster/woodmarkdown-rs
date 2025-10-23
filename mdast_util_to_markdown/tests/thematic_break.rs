@@ -1,4 +1,4 @@
-use markdown::mdast::{Node, ThematicBreak};
+use woodmarkdown::mdast::{Node, ThematicBreak};
 use mdast_util_to_markdown::{
     to_markdown as to, to_markdown_with_options as to_md_with_opts, Options,
 };
