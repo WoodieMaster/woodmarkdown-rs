@@ -27,16 +27,13 @@ log = ["dep:log"]
 serde = ["dep:serde"]
 
 [package]
-authors = ["Titus Wormer <tituswormer@gmail.com>"]
-categories = ["compilers", "encoding", "parser-implementations", "parsing", "text-processing"]
-description = "CommonMark compliant markdown parser in Rust with ASTs and extensions"
+authors = ["Master Woodie <tabletzuhausebeiuns@gmail.com>"]
 edition = "2018"
-homepage = "https://github.com/wooorm/markdown-rs"
+homepage = "https://github.com/WoodieMaster/woodmarkdown-rs.git"
 include = ["src/", "license"]
-keywords = ["commonmark", "markdown", "parse", "render", "tokenize"]
 license = "MIT"
-name = "markdown"
-repository = "https://github.com/wooorm/markdown-rs"
+name = "woodmarkdown"
+repository = "https://github.com/WoodieMaster/woodmarkdown-rs.git"
 rust-version = "1.56"
 version = "1.0.0"
 
