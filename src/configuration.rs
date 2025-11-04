@@ -3,6 +3,8 @@ use crate::util::{
     mdx::{EsmParse as MdxEsmParse, ExpressionParse as MdxExpressionParse},
 };
 use alloc::{boxed::Box, fmt, string::String};
+#[cfg(feature = "wasm")]
+use wasm_bindgen::prelude::wasm_bindgen;
 
 /// Control which constructs are enabled.
 ///
@@ -36,6 +38,7 @@ use alloc::{boxed::Box, fmt, string::String};
     derive(serde::Serialize, serde::Deserialize),
     serde(rename_all = "camelCase")
 )]
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 pub struct Constructs {
     /// Attention.
     ///
@@ -477,6 +480,7 @@ impl Constructs {
     derive(serde::Serialize, serde::Deserialize),
     serde(default, rename_all = "camelCase")
 )]
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 pub struct CompileOptions {
     /// Whether to allow all values in images.
     ///
@@ -666,6 +670,8 @@ pub struct CompileOptions {
     /// # Ok(())
     /// # }
     /// ```
+    ///
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub default_line_ending: LineEnding,
 
     /// Textual label to describe the backreference back to footnote calls.
@@ -709,6 +715,7 @@ pub struct CompileOptions {
     /// # Ok(())
     /// # }
     /// ```
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub gfm_footnote_back_label: Option<String>,
 
     /// Prefix to use before the `id` attribute on footnotes to prevent them
@@ -765,6 +772,7 @@ pub struct CompileOptions {
     /// # Ok(())
     /// # }
     /// ```
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub gfm_footnote_clobber_prefix: Option<String>,
 
     /// Attributes to use on the footnote label.
@@ -813,6 +821,7 @@ pub struct CompileOptions {
     /// # Ok(())
     /// # }
     /// ```
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub gfm_footnote_label_attributes: Option<String>,
 
     /// HTML tag name to use for the footnote label element.
@@ -858,6 +867,7 @@ pub struct CompileOptions {
     /// # Ok(())
     /// # }
     /// ```
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub gfm_footnote_label_tag_name: Option<String>,
 
     /// Textual label to use for the footnotes section.
@@ -903,6 +913,7 @@ pub struct CompileOptions {
     /// # Ok(())
     /// # }
     /// ```
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub gfm_footnote_label: Option<String>,
 
     /// Whether or not GFM task list html `<input>` items are enabled.
@@ -994,6 +1005,7 @@ pub struct CompileOptions {
     pub gfm_tagfilter: bool,
 }
 
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 impl CompileOptions {
     /// GFM.
     ///
@@ -1041,6 +1053,7 @@ impl CompileOptions {
     derive(serde::Serialize, serde::Deserialize),
     serde(default, rename_all = "camelCase")
 )]
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 pub struct ParseOptions {
     // Note: when adding fields, don’t forget to add them to `fmt::Debug` below.
     /// Which constructs to enable and disable.
@@ -1080,6 +1093,7 @@ pub struct ParseOptions {
     /// # }
     /// ```
     #[cfg_attr(feature = "serde", serde(default))]
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub constructs: Constructs,
 
     /// Whether to support GFM strikethrough with a single tilde
@@ -1208,6 +1222,7 @@ pub struct ParseOptions {
     /// For an example that adds support for JavaScript with SWC, see
     /// `tests/test_utils/mod.rs`.
     #[cfg_attr(feature = "serde", serde(skip))]
+    #[cfg_attr(feature = "wasm", wasm_bindgen(skip))]
     pub mdx_expression_parse: Option<Box<MdxExpressionParse>>,
 
     /// Function to parse ESM with.
@@ -1225,6 +1240,7 @@ pub struct ParseOptions {
     /// For an example that adds support for JavaScript with SWC, see
     /// `tests/test_utils/mod.rs`.
     #[cfg_attr(feature = "serde", serde(skip))]
+    #[cfg_attr(feature = "wasm", wasm_bindgen(skip))]
     pub mdx_esm_parse: Option<Box<MdxEsmParse>>,
     // Note: when adding fields, don’t forget to add them to `fmt::Debug` below.
 }
@@ -1263,6 +1279,8 @@ impl Default for ParseOptions {
     }
 }
 
+
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 impl ParseOptions {
     /// GFM.
     ///
@@ -1331,13 +1349,17 @@ impl ParseOptions {
     derive(serde::Serialize, serde::Deserialize),
     serde(default)
 )]
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 pub struct Options {
     /// Configuration that describes how to parse from markdown.
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub parse: ParseOptions,
     /// Configuration that describes how to compile to HTML.
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub compile: CompileOptions,
 }
 
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 impl Options {
     /// GFM.
     ///

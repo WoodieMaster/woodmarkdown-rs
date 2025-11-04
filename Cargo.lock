@@ -2749,6 +2749,7 @@ dependencies = [
  "serde_json",
  "swc_core",
  "unicode-id",
+ "wasm-bindgen",
 ]
 
 [[package]]

@@ -1,15 +1,23 @@
 use crate::unist::{Point, Position};
 use alloc::{boxed::Box, fmt, string::String};
 
+#[cfg(feature = "wasm")]
+use wasm_bindgen::prelude::wasm_bindgen;
+
 #[derive(Clone, Debug, PartialEq)]
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 pub struct Message {
     /// Place of message.
+    #[cfg_attr(feature = "wasm", wasm_bindgen(skip))]
     pub place: Option<Box<Place>>,
     /// Reason for message (should use woodmarkdown).
+    #[cfg_attr(feature = "wasm", wasm_bindgen(getter_with_clone))]
     pub reason: String,
     /// Category of message.
+    #[cfg_attr(feature = "wasm", wasm_bindgen(skip))]
     pub rule_id: Box<String>,
     /// Namespace of message.
+    #[cfg_attr(feature = "wasm", wasm_bindgen(skip))]
     pub source: Box<String>,
 }
 

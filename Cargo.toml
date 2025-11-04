@@ -7,6 +7,7 @@ path = "benches/bench.rs"
 log = { optional = true, version = "0.4" }
 serde = { features = ["derive"], optional = true, version = "1" }
 unicode-id = { features = ["no_std"], version = "0.3" }
+wasm-bindgen = { version = "0.2.84" }
 
 [dev-dependencies]
 criterion = "0.5"
@@ -22,6 +23,7 @@ swc_core = { version = "33", features = [
 
 [features]
 default = []
+wasm= []
 json = ["serde"]
 log = ["dep:log"]
 serde = ["dep:serde"]

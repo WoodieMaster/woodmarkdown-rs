@@ -1,4 +1,6 @@
 use alloc::{str::FromStr, string::String};
+#[cfg(feature = "wasm")]
+use wasm_bindgen::prelude::wasm_bindgen;
 
 /// Type of line endings in woodmarkdown.
 ///
@@ -17,6 +19,7 @@ use alloc::{str::FromStr, string::String};
 /// ```
 #[derive(Clone, Debug, Default, Eq, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "wasm", wasm_bindgen)]
 pub enum LineEnding {
     /// Both a carriage return (`\r`) and a line feed (`\n`).
     ///
